@@ -65,13 +65,12 @@ M_DEPS += ../../../library/axi_dmac/src_axi_mm.v
 M_DEPS += ../../../library/axi_dmac/src_axi_stream.v
 M_DEPS += ../../../library/axi_dmac/src_fifo_inf.v
 M_DEPS += ../../../library/common/ad_axis_inf_rx.v
-M_DEPS += ../../../library/common/ad_b2g.v
+
 M_DEPS += ../../../library/common/ad_datafmt.v
 M_DEPS += ../../../library/common/ad_dds.v
 M_DEPS += ../../../library/common/ad_dds_1.v
 M_DEPS += ../../../library/common/ad_dds_sine.v
-M_DEPS += ../../../library/common/ad_g2b.v
-M_DEPS += ../../../library/common/ad_mem.v
+
 M_DEPS += ../../../library/common/ad_pnmon.v
 M_DEPS += ../../../library/common/ad_rst.v
 M_DEPS += ../../../library/common/ad_xcvr_rx_if.v
@@ -84,7 +83,7 @@ M_DEPS += ../../../library/common/up_dac_common.v
 M_DEPS += ../../../library/common/up_delay_cntrl.v
 M_DEPS += ../../../library/common/up_xfer_cntrl.v
 M_DEPS += ../../../library/common/up_xfer_status.v
-M_DEPS += ../../../library/common/util_delay.v
+
 M_DEPS += ../../../library/jesd204/jesd204_soft_pcs_rx/8b10b_decoder.v
 M_DEPS += ../../../library/jesd204/jesd204_soft_pcs_rx/jesd204_soft_pcs_rx.v
 M_DEPS += ../../../library/jesd204/jesd204_soft_pcs_rx/jesd204_soft_pcs_rx_hw.tcl
