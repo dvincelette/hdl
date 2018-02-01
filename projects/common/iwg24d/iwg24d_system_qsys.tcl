@@ -68,10 +68,10 @@ set_hps_io  IO_SHARED_Q3_03   EMAC1:RX_CLK
 set_hps_io  IO_SHARED_Q3_04   EMAC1:RX_CTL
 set_hps_io  IO_SHARED_Q3_05   EMAC1:TXD0
 set_hps_io  IO_SHARED_Q3_06   EMAC1:TXD1
-set_hps_io  IO_SHARED_Q3_07   EMAC1:TXD2
-set_hps_io  IO_SHARED_Q3_08   EMAC1:TXD3
-set_hps_io  IO_SHARED_Q3_09   EMAC1:RXD0
-set_hps_io  IO_SHARED_Q3_10   EMAC1:RXD1
+set_hps_io  IO_SHARED_Q3_07   EMAC1:RXD0
+set_hps_io  IO_SHARED_Q3_08   EMAC1:RXD1
+set_hps_io  IO_SHARED_Q3_09   EMAC1:TXD2
+set_hps_io  IO_SHARED_Q3_10   EMAC1:TXD3
 set_hps_io  IO_SHARED_Q3_11   EMAC1:RXD2
 set_hps_io  IO_SHARED_Q3_12   EMAC1:RXD3
 set_hps_io  IO_SHARED_Q4_01   I2C1:SDA
