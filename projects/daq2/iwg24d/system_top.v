@@ -88,13 +88,6 @@ module system_top (
   output  [  0:0]   hps_usb_stp,
   inout   [  7:0]   hps_usb_d,
   
-  // hps-spi
-
-  output  [  0:0]   hps_spim0_clk,
-  output  [  0:0]   hps_spim0_mosi,
-  input   [  0:0]   hps_spim0_miso,
-  output  [  0:0]   hps_spim0_ss0_n,
-
   // hps-uart
 
   input   [  0:0]   hps_uart0_rx,

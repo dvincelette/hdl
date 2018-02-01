@@ -187,18 +187,6 @@ set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_usb_d[5]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_usb_d[6]
 set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_usb_d[7]
 
-# hps-spi
-
-set_location_assignment PIN_B21   -to hps_spim0_clk
-set_location_assignment PIN_B20   -to hps_spim0_mosi
-set_location_assignment PIN_C19   -to hps_spim0_miso
-set_location_assignment PIN_D19   -to hps_spim0_ss0_n
-
-set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_spim0_clk
-set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_spim0_mosi
-set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_spim0_miso
-set_instance_assignment -name IO_STANDARD "1.8 V" -to hps_spim0_ss0_n
-
 # hps-uart
 
 set_location_assignment PIN_K18   -to hps_uart0_tx

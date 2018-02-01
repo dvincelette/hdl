@@ -82,10 +82,10 @@ set_hps_io  IO_SHARED_Q4_05   NONE
 set_hps_io  IO_SHARED_Q4_06   NONE
 set_hps_io  IO_SHARED_Q4_07   NONE
 set_hps_io  IO_SHARED_Q4_08   NONE
-set_hps_io  IO_SHARED_Q4_09   SPIM0:CLK
-set_hps_io  IO_SHARED_Q4_10   SPIM0:MOSI
-set_hps_io  IO_SHARED_Q4_11   SPIM0:MISO
-set_hps_io  IO_SHARED_Q4_12   SPIM0:SS0_N
+set_hps_io  IO_SHARED_Q4_09   NONE
+set_hps_io  IO_SHARED_Q4_10   NONE
+set_hps_io  IO_SHARED_Q4_11   NONE
+set_hps_io  IO_SHARED_Q4_12   NONE
 
 add_instance sys_hps altera_arria10_hps
 set_instance_parameter_value sys_hps {MPU_EVENTS_Enable} {0}
