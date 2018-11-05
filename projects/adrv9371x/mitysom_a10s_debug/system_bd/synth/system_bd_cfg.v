@@ -1,9 +1,0 @@
-config system_bd_cfg;
-		design system_bd;
-		instance system_bd.sys_hps use system_bd_altera_arria10_hps_180.system_bd_altera_arria10_hps_180_sja5gji;
-		instance system_bd.sys_hps_ddr4_cntrl use system_bd_altera_emif_a10_hps_180.system_bd_altera_emif_a10_hps_180_ebac5ai;
-		instance system_bd.irq_mapper use system_bd_altera_irq_mapper_180.system_bd_altera_irq_mapper_180_vrecy4a;
-		instance system_bd.irq_mapper_001 use system_bd_altera_irq_mapper_180.system_bd_altera_irq_mapper_180_vrecy4a;
-		instance system_bd.rst_controller use system_bd_altera_reset_controller_180.altera_reset_controller;
-endconfig
-
