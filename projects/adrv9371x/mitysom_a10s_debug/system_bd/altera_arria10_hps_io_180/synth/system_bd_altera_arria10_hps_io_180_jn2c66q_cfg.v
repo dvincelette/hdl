@@ -1,0 +1,5 @@
+config system_bd_altera_arria10_hps_io_180_jn2c66q_cfg;
+		design system_bd_altera_arria10_hps_io_180_jn2c66q;
+		instance system_bd_altera_arria10_hps_io_180_jn2c66q.border use system_bd_altera_arria10_interface_generator_140.system_bd_altera_arria10_interface_generator_140_ytccvxq;
+endconfig
+
