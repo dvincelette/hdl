@@ -49,7 +49,7 @@ module system_top (
   output  [  0:0]   hps_ddr_clk_n,
   output  [ 16:0]   hps_ddr_a,
   output  [  1:0]   hps_ddr_ba,
-  output  [  0:0]   hps_ddr_bg,
+  output  [  1:0]   hps_ddr_bg,
   output  [  0:0]   hps_ddr_cke,
   output  [  0:0]   hps_ddr_cs_n,
   output  [  0:0]   hps_ddr_odt,
@@ -160,11 +160,12 @@ module system_top (
   wire    [ 63:0]   gpio_o;
   wire    [  7:0]   spi_csn_s;
   wire              dac_fifo_bypass;
+  wire              pll_powerdown;
 
   // assignments
 
-  assign spi_csn_ad9528 = spi_csn_s[0];
-  assign spi_csn_ad9371 = spi_csn_s[1];
+  assign spi_csn_ad9371 = spi_csn_s[0];
+  assign spi_csn_ad9528 = spi_csn_s[1];
 
   // gpio (ad9371)
 
@@ -305,7 +306,10 @@ module system_top (
     .rx_os_sysref_export (sysref),
     .rx_ref_clk_clk (ref_clk0),
     .rx_sync_export (rx_sync),
-    .rx_sysref_export (sysref));
+    .rx_sysref_export (sysref),
+    .tx_mcgb_rst_mcgb_rst                 (pll_powerdown),
+    .tx_pll_powerdown_in_pll_powerdown    (pll_powerdown),
+    .tx_pll_powerdown_out_pll_powerdown (pll_powerdown));
 
 endmodule
 
