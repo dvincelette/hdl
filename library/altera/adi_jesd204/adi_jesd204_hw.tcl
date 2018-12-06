@@ -145,13 +145,24 @@ proc create_lane_pll {id pllclk_frequency refclk_frequency} {
   add_instance lane_pll altera_xcvr_atx_pll_a10
   set_instance_property lane_pll SUPPRESS_ALL_INFO_MESSAGES true
   set_instance_parameter_value lane_pll {enable_pll_reconfig} {1}
+  set_instance_parameter_value lane_pll {enable_mcgb} {1}
+  set_instance_parameter_value lane_pll {enable_hfreq_clk} {1}
   set_instance_parameter_value lane_pll {rcfg_separate_avmm_busy} {1}
   set_instance_parameter_value lane_pll {set_capability_reg_enable} {1}
   set_instance_parameter_value lane_pll {set_user_identifier} $id
   set_instance_parameter_value lane_pll {set_csr_soft_logic_enable} {1}
   set_instance_parameter_value lane_pll {set_output_clock_frequency} $pllclk_frequency
   set_instance_parameter_value lane_pll {set_auto_reference_clock_frequency} $refclk_frequency
-  add_connection phy_reset_control.pll_powerdown lane_pll.pll_powerdown
+
+  #add_connection phy_reset_control.pll_powerdown lane_pll.pll_powerdown
+  #add_connection phy_reset_control.pll_powerdown lane_pll.mcgb_rst
+  add_interface pll_powerdown_out conduit end
+  set_interface_property pll_powerdown_out EXPORT_OF phy_reset_control.pll_powerdown
+  add_interface pll_powerdown_in conduit end
+  set_interface_property pll_powerdown_in EXPORT_OF lane_pll.pll_powerdown
+  add_interface mcgb_rst conduit end
+  set_interface_property mcgb_rst EXPORT_OF lane_pll.mcgb_rst
+
   add_connection lane_pll.pll_locked phy_reset_control.pll_locked
   add_connection lane_pll.pll_cal_busy phy_reset_control.pll_cal_busy
   add_connection ref_clock.out_clk lane_pll.pll_refclk0
@@ -340,7 +351,8 @@ proc jesd204_compose {} {
     set phy_reset_intfs {analogreset digitalreset cal_busy}
 
     create_lane_pll $id $pllclk_frequency $refclk_frequency
-    add_connection lane_pll.tx_serial_clk phy.serial_clk
+    #add_connection lane_pll.tx_serial_clk phy.serial_clk
+    add_connection lane_pll.mcgb_serial_clk phy.serial_clk
   } else {
     set tx_rx "rx"
     set data_direction source
