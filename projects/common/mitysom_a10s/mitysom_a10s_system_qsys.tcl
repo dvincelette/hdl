@@ -88,6 +88,7 @@ set_hps_io  IO_SHARED_Q4_11   NONE
 set_hps_io  IO_SHARED_Q4_12   NONE
 
 add_instance sys_hps altera_arria10_hps
+set_instance_parameter_value sys_hps {EOSC1_CLK_MHZ} {50.0}
 set_instance_parameter_value sys_hps {MPU_EVENTS_Enable} {0}
 set_instance_parameter_value sys_hps {F2S_Width} {0}
 set_instance_parameter_value sys_hps {S2F_Width} {0}
