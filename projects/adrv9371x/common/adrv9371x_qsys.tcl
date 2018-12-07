@@ -20,6 +20,12 @@ add_interface tx_sysref conduit end
 set_interface_property tx_sysref EXPORT_OF ad9371_tx_jesd204.sysref
 add_interface tx_sync conduit end
 set_interface_property tx_sync EXPORT_OF ad9371_tx_jesd204.sync
+add_interface tx_mcgb_rst conduit end
+set_interface_property tx_mcgb_rst EXPORT_OF ad9371_tx_jesd204.mcgb_rst
+add_interface tx_pll_powerdown_out conduit end
+set_interface_property tx_pll_powerdown_out EXPORT_OF ad9371_tx_jesd204.pll_powerdown_out
+add_interface tx_pll_powerdown_in conduit end
+set_interface_property tx_pll_powerdown_in EXPORT_OF ad9371_tx_jesd204.pll_powerdown_in
 
 # ad9371_rx JESD204
 
