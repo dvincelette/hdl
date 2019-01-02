@@ -70,7 +70,7 @@ module system_top (
   output  [  0:0]   sys_ddr_clk_n,
   output  [ 16:0]   sys_ddr_a,
   output  [  1:0]   sys_ddr_ba,
-  output  [  0:0]   sys_ddr_bg,
+  output  [  1:0]   sys_ddr_bg,
   output  [  0:0]   sys_ddr_cke,
   output  [  0:0]   sys_ddr_cs_n,
   output  [  0:0]   sys_ddr_odt,
