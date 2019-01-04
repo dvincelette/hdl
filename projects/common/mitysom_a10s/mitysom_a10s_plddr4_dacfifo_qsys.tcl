@@ -307,7 +307,7 @@ add_instance $dac_fifo_name avl_dacfifo
 set_instance_parameter_value $dac_fifo_name {DAC_DATA_WIDTH} $dac_data_width
 set_instance_parameter_value $dac_fifo_name {DMA_DATA_WIDTH} $dac_dma_data_width
 set_instance_parameter_value $dac_fifo_name {AVL_DATA_WIDTH} {128}
-set_instance_parameter_value $dac_fifo_name {AVL_ADDRESS_WIDTH} {25}
+set_instance_parameter_value $dac_fifo_name {AVL_ADDRESS_WIDTH} {27}
 set_instance_parameter_value $dac_fifo_name {AVL_BASE_ADDRESS} {0}
 set_instance_parameter_value $dac_fifo_name {AVL_ADDRESS_LIMIT} {0x8fffffff}
 set_instance_parameter_value $dac_fifo_name {DAC_MEM_ADDRESS_WIDTH} {12}
