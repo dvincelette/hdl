@@ -10,25 +10,16 @@ source $ad_hdl_dir/projects/common/mitysom_a10s/mitysom_a10s_plddr4_assign.tcl
 # ad9371
 
 set_location_assignment PIN_N24   -to ref_clk0               ; ## D04  FMC_HPC_GBTCLK0_M2C_P
-set_location_assignment PIN_N23   -to "ref_clk0(n)"          ; ## D05  FMC_HPC_GBTCLK0_M2C_N
 #set_location_assignment PIN_R29   -to ref_clk1               ; ## B20  FMC_HPC_GBTCLK1_M2C_P (NC)
 #set_location_assignment PIN_R28   -to "ref_clk1(n)"          ; ## B21  FMC_HPC_GBTCLK1_M2C_N (NC)
-set_location_assignment PIN_V26  -to rx_serial_data[0]      ; ## A02  FMC_HPC_DP1_M2C_P
-set_location_assignment PIN_V25  -to "rx_serial_data[0](n)" ; ## A03  FMC_HPC_DP1_M2C_N
-set_location_assignment PIN_P26  -to rx_serial_data[1]      ; ## A06  FMC_HPC_DP2_M2C_P
-set_location_assignment PIN_P25  -to "rx_serial_data[1](n)" ; ## A07  FMC_HPC_DP2_M2C_N
-set_location_assignment PIN_T26  -to rx_serial_data[2]      ; ## C06  FMC_HPC_DP0_M2C_P
-set_location_assignment PIN_T25  -to "rx_serial_data[2](n)" ; ## C07  FMC_HPC_DP0_M2C_N
-set_location_assignment PIN_M26  -to rx_serial_data[3]      ; ## A10  FMC_HPC_DP3_M2C_P
-set_location_assignment PIN_M25  -to "rx_serial_data[3](n)" ; ## A11  FMC_HPC_DP3_M2C_N
-set_location_assignment PIN_W28  -to tx_serial_data[0]      ; ## A22  FMC_HPC_DP1_C2M_P (tx_serial_data_p[3])
-set_location_assignment PIN_W27  -to "tx_serial_data[0](n)" ; ## A23  FMC_HPC_DP1_C2M_N (tx_serial_data_n[3])
-set_location_assignment PIN_R28  -to tx_serial_data[1]      ; ## A26  FMC_HPC_DP2_C2M_P (tx_serial_data_p[0])
-set_location_assignment PIN_R27  -to "tx_serial_data[1](n)" ; ## A27  FMC_HPC_DP2_C2M_N (tx_serial_data_n[0])
-set_location_assignment PIN_U28  -to tx_serial_data[2]      ; ## C02  FMC_HPC_DP0_C2M_P (tx_serial_data_p[1])
-set_location_assignment PIN_U27  -to "tx_serial_data[2](n)" ; ## C03  FMC_HPC_DP0_C2M_N (tx_serial_data_n[1])
-set_location_assignment PIN_N28  -to tx_serial_data[3]      ; ## A30  FMC_HPC_DP3_C2M_P (tx_serial_data_p[2])
-set_location_assignment PIN_N27  -to "tx_serial_data[3](n)" ; ## A31  FMC_HPC_DP3_C2M_N (tx_serial_data_n[2])
+set_location_assignment PIN_AD26  -to rx_serial_data[0]      ; ## A02  FMC_HPC_DP1_M2C_P
+set_location_assignment PIN_AB26  -to rx_serial_data[1]      ; ## A06  FMC_HPC_DP2_M2C_P
+set_location_assignment PIN_AF26  -to rx_serial_data[2]      ; ## C06  FMC_HPC_DP0_M2C_P
+set_location_assignment PIN_Y26  -to rx_serial_data[3]      ; ## A10  FMC_HPC_DP3_M2C_P
+set_location_assignment PIN_AE28  -to tx_serial_data[0]      ; ## A22  FMC_HPC_DP1_C2M_P (tx_serial_data_p[3])
+set_location_assignment PIN_AC28  -to tx_serial_data[1]      ; ## A26  FMC_HPC_DP2_C2M_P (tx_serial_data_p[0])
+set_location_assignment PIN_AG28  -to tx_serial_data[2]      ; ## C02  FMC_HPC_DP0_C2M_P (tx_serial_data_p[1])
+set_location_assignment PIN_AA28  -to tx_serial_data[3]      ; ## A30  FMC_HPC_DP3_C2M_P (tx_serial_data_p[2])
 
 set_instance_assignment -name XCVR_VCCR_VCCT_VOLTAGE 1_0V -to rx_serial_data
 set_instance_assignment -name XCVR_VCCR_VCCT_VOLTAGE 1_0V -to tx_serial_data
