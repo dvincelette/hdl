@@ -306,10 +306,7 @@ module system_top (
     .rx_os_sysref_export (sysref),
     .rx_ref_clk_clk (ref_clk0),
     .rx_sync_export (rx_sync),
-    .rx_sysref_export (sysref),
-    .tx_mcgb_rst_mcgb_rst                 (pll_powerdown),
-    .tx_pll_powerdown_in_pll_powerdown    (pll_powerdown),
-    .tx_pll_powerdown_out_pll_powerdown (pll_powerdown));
+    .rx_sysref_export (sysref));
 
 endmodule
 
