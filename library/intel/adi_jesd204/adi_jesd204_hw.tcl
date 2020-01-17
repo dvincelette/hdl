@@ -410,20 +410,19 @@ proc jesd204_compose {} {
 
     create_lane_pll $id $pllclk_frequency $refclk_frequency $num_of_lanes $bonding_clocks_en $mcgb_en
 
-	if {$mcgb_en} {
-		add_connection lane_pll.mcgb_serial_clk phy.serial_clk_x1
-	} else {
-		add_connection lane_pll.tx_serial_clk phy.serial_clk_x1
-	}
     if {$num_of_lanes > 6} {          
-        if {$bonding_clocks_en} {
-            add_connection lane_pll.tx_bonding_clocks phy.bonding_clocks
-        } else {
-            add_connection lane_pll.tx_serial_clk   phy.serial_clk_x1
-            add_connection lane_pll.mcgb_serial_clk phy.serial_clk_xN
-        }
+      if {$bonding_clocks_en} {
+        add_connection lane_pll.tx_bonding_clocks phy.bonding_clocks
+      } else {
+        add_connection lane_pll.tx_serial_clk   phy.serial_clk_x1
+        add_connection lane_pll.mcgb_serial_clk phy.serial_clk_xN
+      }
     } else {
+      if {$mcgb_en} {
+        add_connection lane_pll.mcgb_serial_clk phy.serial_clk_x1
+      } else {
         add_connection lane_pll.tx_serial_clk phy.serial_clk_x1
+      }
     }
   } else {
     set tx_rx "rx"
