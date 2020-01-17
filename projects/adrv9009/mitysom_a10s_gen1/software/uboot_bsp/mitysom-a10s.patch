@@ -13,7 +13,7 @@ index b7f7963433..41cafe49a9 100755
  					 CONFIG_SYS_INIT_RAM_SIZE  - SIZEOF_MMUPAGETABLE)
  /* Default load address */
 -#define CONFIG_SYS_LOAD_ADDR		0x8000
-+#define CONFIG_SYS_LOAD_ADDR		0xC000
++#define CONFIG_SYS_LOAD_ADDR		0x10000
  
  /*
   * Display CPU and Board Info
